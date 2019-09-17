@@ -1,12 +1,23 @@
-# django-polls
-Django Tutorial from part 1 - 5
-# Polls Q&A:
-What is your favorite colors?
-- Red
-- Green
-- Blue
+# Django Polls Application
 
-What is your favorite pets?
-- Dog
-- Cat
-- Fish
+---
+
+**Author: Punyawee Srithongkerd**
+**GitID: PunyaweeSrithongkerd**
+**Django Polls use for voting and show result**
+
+## Requirements
+
+The application requires
+
+* **Python 3.6 or newer**
+* **Django 2.1.2 or newer**
+* **Python add-on modules as in [requirements.txt](requirements.txt)**
+
+## How to Run
+
+* **clone the file from github to your computure**
+
+* **open your cmd and move to the file's directory**
+
+* **type `py manage.py runserver` in cmd**
