@@ -16,8 +16,20 @@ The application requires
 
 ## How to Run
 
-* **clone the file from github to your computure**
+### Setup
 
-* **open your cmd and move to the file's directory**
+Clone this Project to your own directory then open your clone directory and install the required packages by using the following command
 
-* **type `py manage.py runserver` in cmd**
+`pip install -r requirements.txt`
+
+Then create .env file and add `DEBUG  = TRUE` in .env file
+
+Then run this command
+
+`py manage.py migrate`
+
+After migrate you can run the server by run this command
+
+`py manage.py runserver`
+
+Enjoy!
