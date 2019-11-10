@@ -2,6 +2,7 @@ import datetime
 
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 class Question(models.Model):
@@ -23,3 +24,24 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class Vote(models.Model):
+    """A vote by a user for a particular choice in a Question."""
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+def vote_count(id):
+    total_vote = 0
+    for choice in Question.objects.get(pk=id).choice_set.all():
+        total_vote += choice.votes
+    return total_vote
+
+
+def find_polls_for_text(text):
+    """Return list of Question objects for all polls containing some text"""
+    # Hint: Question.objects.filter( expression )
+    # and use the relations question_text__contains or __icontains
+    return Question.objects.filter(question_text__contains = text)
