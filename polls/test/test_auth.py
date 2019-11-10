@@ -70,7 +70,7 @@ class AuthTest(TestCase):
             pass
         vote_url = reverse('polls:vote', args=[self.q1.id])
         choice_id = self.q1.choice_set.first().id
-        response = self.client.post( vote_url, {'choice':choice_id})
+        response = self.client.post(vote_url, {'choice': choice_id})
         self.assertEqual(response.status_code, 302)
         # comparing redirect response to reverse('login') fails
         # because of next=... query param.  Append it.

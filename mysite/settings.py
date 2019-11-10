@@ -58,6 +58,7 @@ AUTHENTICATION_BACKEND = (
 )
 
 LOGIN_REDIRECT_URL = '/polls/'
+LOGOUT_REDIRECT_URL = '/accounts/login'
 
 ROOT_URLCONF = 'mysite.urls'
 
