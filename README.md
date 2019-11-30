@@ -18,18 +18,22 @@ The application requires
 
 ### Setup
 
-Clone this Project to your own directory then open your clone directory and install the required packages by using the following command
+1. Clone this Project to your own directory then open your clone directory and install the required packages by using the following command
 
 `pip install -r requirements.txt`
 
-Then create .env file and add `DEBUG  = TRUE` in .env file
+2. Then create .env file and add `DEBUG  = TRUE` in .env file
 
-Then run this command
+3. Then run this command
 
 `py manage.py migrate`
 
-After migrate you can run the server by run this command
+### How to run
+
+run this command
 
 `py manage.py runserver`
 
-Enjoy!
+To enter site
+
+`http://127.0.0.1:8000/polls/`

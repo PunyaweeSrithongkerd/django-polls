@@ -45,3 +45,5 @@ def find_polls_for_text(text):
     # Hint: Question.objects.filter( expression )
     # and use the relations question_text__contains or __icontains
     return Question.objects.filter(question_text__contains = text)
+
+
